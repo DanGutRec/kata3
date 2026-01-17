@@ -35,7 +35,7 @@ public class HistogramBuilder {
         labels.put("legend", legend);
         return this;
     }
-    public <T> Histogram classifySiingular(Function<Movie,T> function){
+    public <T> Histogram classifySingular(Function<Movie,T> function){
         Histogram<T> histogram = new Histogram<>(labels);
         movies.map(function::apply).forEach(histogram::add);
         return histogram;
